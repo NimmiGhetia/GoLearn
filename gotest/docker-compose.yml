@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    container_name: test-app
+    build: .
+    ports: 
+      - 8081:8080 
+    restart: on-failure
+    networks:
+      - fullstack
+ 
+# Networks to be created to facilitate communication between containers
+networks:
+  fullstack:
+    driver: bridge
+
