@@ -1,4 +1,4 @@
-node('docker') {
+node('master') {
     checkout scm
     stage('Build') {
         docker.image('golang').inside {
