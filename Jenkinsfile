@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build base image') {
       steps {
-        sh 'make build all'
+        sh 'make all'
       }
     }
     stage('run tests') {
